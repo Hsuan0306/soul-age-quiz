@@ -17,62 +17,52 @@ export default function Home() {
       videoUrl: "/videos/q1.mp4",
       question: "Q1｜在你心目中，去 KTV 必唱的華語金曲是？",
       options: [
-        { text: "伍佰《挪威的森林》（1996）", score: 3 },
-        { text: "周杰倫 & LARA《珊瑚海》（2005）", score: 2 },
-        { text: "兄弟本色《Fly Out》（2016）", score: 1 },
-        { text: "陳華《想和你看五月的晚霞》（2022）", score: 0 },
+        { text: "伍佰《挪威的森林》", score: 3 },
+        { text: "周杰倫 & LARA《珊瑚海》", score: 2 },
+        { text: "兄弟本色《Fly Out》", score: 1 },
+        { text: "陳華《想和你看五月的晚霞》", score: 0 },
       ],
     },
     {
       videoUrl: "/videos/q2.mp4",
-      question: "Q2｜你心目中最經典的電影是？",
+      question: "Q2｜你心中最經典的電影是？",
       options: [
-        { text: "《龍貓》（1988 日本）", score: 3 },
-        { text: "《鐵達尼號》（1997 美國）", score: 2 },
-        { text: "《少林足球》（2001 香港）", score: 1 },
-        { text: "《不可能的任務 7》（2025 美國）", score: 0 },
+        { text: "《龍貓》", score: 3 },
+        { text: "《鐵達尼號》", score: 2 },
+        { text: "《少林足球》", score: 1 },
+        { text: "《不可能的任務》", score: 0 },
       ],
     },
     {
       videoUrl: "/videos/q3.mp4",
       question: "Q3｜你最懷念的卡通是？",
       options: [
-        { text: "《頑皮豹》（1985）", score: 3 },
-        { text: "《可愛巧虎島》（1993）", score: 2 },
-        { text: "《真珠美人魚》（2003）", score: 1 },
-        { text: "《探險活寶》（2010）", score: 0 },
+        { text: "《頑皮豹》", score: 3 },
+        { text: "《可愛巧虎島》", score: 2 },
+        { text: "《真珠美人魚》", score: 1 },
+        { text: "《探險活寶》", score: 0 },
       ],
     },
     {
       videoUrl: "/videos/q4.mp4",
-      question: "Q4｜哪一個迷因／網路梗圖讓你最印象深刻？",
+      question: "Q4｜最讓你中毒的迷因是？",
       options: [
-        { text: "瑞克搖（Rickroll，1987）", score: 3 },
-        { text: "六月是夏天（2024）", score: 2 },
-        { text: "露比醬（2025.4）", score: 1 },
-        { text: "大展鴻圖（2025.6）", score: 0 },
+        { text: "瑞克搖", score: 3 },
+        { text: "六月是夏天", score: 2 },
+        { text: "露比醬", score: 1 },
+        { text: "大展鴻圖", score: 0 },
       ],
     },
     {
       videoUrl: "/videos/q5.mp4",
       question: "Q5｜哪一首廣告歌讓你覺得最洗腦？",
       options: [
-        { text: "「益可膚」（1989）", score: 3 },
-        { text: "「感冒用斯斯～」（1998）", score: 2 },
-        { text: "麥 My Dear Friend（2015）", score: 1 },
-        { text: "全聯福利熊（2017）", score: 0 },
+        { text: "「益可膚」", score: 3 },
+        { text: "「感冒用斯斯～」", score: 2 },
+        { text: "麥 My Dear Friend", score: 1 },
+        { text: "福利熊～熊福利", score: 0 },
       ],
-    },
-    {
-      videoUrl: "/videos/q6.mp4",
-      question: "Q6｜哪個遊戲你覺得最好玩？",
-      options: [
-        { text: "貪食蛇（1976）", score: 3 },
-        { text: "摩爾莊園 (2008)", score: 2 },
-        { text: "subway surfers（2012）", score: 1 },
-        { text: "魔物獵人（2025）", score: 0 },
-      ],
-    },
+    }
   ];
 
   const handleAnswer = (score) => {
@@ -85,7 +75,7 @@ export default function Home() {
       setTimeout(() => {
         setIsLoading(false);
         setStep(step + 1); // 前往結果頁
-      }, 2500);
+      }, 3000);
     } else {
       setStep(step + 1);
     }
@@ -115,5 +105,7 @@ export default function Home() {
     return <ResultPage score={totalScore} onRestart={restartQuiz} />;
   };
 
-  return <main className="min-h-screen bg-neutral-100">{renderPage()}</main>;
+  return <main className="min-h-screen bg-cover"
+  style={{ backgroundImage: "url('/images/background.png')" }}>
+    {renderPage()}</main>;
 }
