@@ -18,7 +18,7 @@ export default function Home() {
       question: "Q1｜在你心目中，去 KTV 必唱的華語金曲是？",
       options: [
         { text: "伍佰《挪威的森林》", score: 3 },
-        { text: "周杰倫 & LARA《珊瑚海》", score: 2 },
+        { text: "周杰倫X梁心頤《珊瑚海》", score: 2 },
         { text: "兄弟本色《Fly Out》", score: 1 },
         { text: "陳華《想和你看五月的晚霞》", score: 0 },
       ],
@@ -48,7 +48,7 @@ export default function Home() {
       question: "Q4｜最讓你中毒的迷因是？",
       options: [
         { text: "瑞克搖", score: 3 },
-        { text: "六月是夏天", score: 2 },
+        { text: "沒有動動的年代", score: 2 },
         { text: "露比醬", score: 1 },
         { text: "大展鴻圖", score: 0 },
       ],
@@ -57,10 +57,10 @@ export default function Home() {
       videoUrl: "/videos/q5.mp4",
       question: "Q5｜哪一首廣告歌讓你覺得最洗腦？",
       options: [
-        { text: "「益可膚」", score: 3 },
-        { text: "「感冒用斯斯～」", score: 2 },
-        { text: "麥 My Dear Friend", score: 1 },
-        { text: "福利熊～熊福利", score: 0 },
+        { text: "益可膚", score: 3 },
+        { text: "斯斯感冒膠囊", score: 2 },
+        { text: "麥香", score: 1 },
+        { text: "全聯福利熊", score: 0 },
       ],
     }
   ];
